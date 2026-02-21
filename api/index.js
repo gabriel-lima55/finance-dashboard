@@ -1,5 +1,5 @@
-const express = require("express")
-const cors = require("cors")
+import express from "express"
+import cors from "cors"
 
 const app = express()
 
@@ -10,6 +10,6 @@ app.get("/", (req, res) => {
   res.status(200).json({ message: "Servidor online 🚀" })
 })
 
-module.exports = (req, res) => {
+export default function handler(req, res) {
   return app(req, res)
 }
