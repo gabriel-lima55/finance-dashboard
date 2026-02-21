@@ -10,7 +10,8 @@ function App() {
   }, [])
 
   return (
-    <h1>Sistema Financeiro</h1>
+    /*Insira o nome de seu Projeto*/
+    <h1>NOME DO PROJETO</h1>
   )
 }
 
