@@ -1,88 +1,24 @@
-# Fullstack Serverless Boilerplate (Vite + Express)
+# 💰 Finance Dashboard - Fullstack Application
 
-Reusable fullstack template built with React (Vite) and Express, optimized for serverless deployment on Vercel.
+Este é um desafio técnico de um Dashboard Financeiro completo, desenvolvido para gerir transações (receitas e despesas) e acompanhar metas financeiras em tempo real.
 
-This project provides a clean architecture foundation to quickly bootstrap fullstack applications with frontend and backend integrated in a single repository.
+## 🚀 Tecnologias Utilizadas
 
----
+- **Frontend:** React.js, Tailwind CSS (Design Responsivo)
+- **Backend:** Node.js, Express
+- **Base de Dados:** PostgreSQL (Hospedado no Neon.tech)
+- **Deploy:** Vercel (Arquitetura Serverless)
+- **Ferramentas:** Lucide React (Ícones), Axios/Fetch API
 
-## 🚀 Stack
+## ✨ Funcionalidades
 
-Frontend:
-- React
-- Vite
+- **Gestão de Transações:** Adição, listagem e eliminação de receitas e despesas.
+- **Dashboard Dinâmico:** Cálculo automático de saldo total, entradas e saídas.
+- **Metas Financeiras:** Acompanhamento de progresso de metas com base no saldo atual.
+- **Filtros e Validações:** Interface intuitiva com feedback visual de transações.
 
-Backend:
-- Express (Serverless Function)
+## 🛠️ Como executar o projeto localmente
 
-Deployment:
-- Vercel (Serverless)
-
----
-
-## 📁 Project Structure
-
-/
-├── api/ # Serverless backend (Express)
-│ └── index.js
-├── src/ # Frontend (React)
-├── public/
-├── package.json
-├── vite.config.js
-
-
----
-
-## ⚙️ How It Works
-
-- The frontend is built using Vite.
-- The backend runs as a Serverless Function inside `/api`.
-- In production, API calls are made using `/api` (no localhost needed).
-- Optimized for seamless deployment on Vercel.
-
----
-
-## 🧪 Run Locally
-
-### 1. Install dependencies
-
-npm install
-
-
-### 2. Run development server
-
-
-Frontend will run on:
-
-http://localhost:5173
-
-
----
-
-## ☁️ Deploy
-
-This project is configured for deployment on Vercel.
-
-1. Push to GitHub
-2. Import repository into Vercel
-3. Select **Vite** as Framework Preset
-4. Deploy
-
-Serverless functions will automatically run from the `/api` directory.
-
----
-
-## 📌 Purpose
-
-This boilerplate was created to:
-
-- Speed up fullstack project initialization
-- Provide a clean reusable architecture
-- Simplify serverless deployment workflow
-- Serve as a foundation for dashboards, SaaS apps, and internal tools
-
----
-
-## 📄 License
-
-MIT
+1. **Clona o repositório:**
+   ```bash
+   git clone [https://github.com/teu-usuario/finance-dashboard.git](https://github.com/teu-usuario/finance-dashboard.git)
