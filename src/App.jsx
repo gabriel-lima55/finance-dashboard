@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { getTransactions, getGoals } from "./api";
 import Form from "./components/Form";
-import { deleteTransaction, deleteGoal } from "./api"; // Importe as funções de deletar
+import { deleteTransaction, deleteGoal } from "./api";
 
 export default function App() {
   const [transactions, setTransactions] = useState([]);
@@ -19,7 +19,6 @@ export default function App() {
       console.error("Erro ao conectar com o backend:", err);
     }
   };
-    // ... dentro do seu componente principal
   const totalIncome = transactions
     .filter((t) => t.type === "income")
     .reduce((acc, t) => acc + Number(t.amount), 0);
@@ -33,17 +32,16 @@ export default function App() {
   const handleDelete = async (id) => {
     if (window.confirm("Tem certeza que deseja excluir esta transação?")) {
       await deleteTransaction(id);
-      reloadData(); // Recarrega a lista após deletar
+      reloadData();
     }
   };
   const handleDeleteGoal = async (id) => {
   if (window.confirm("Deseja excluir esta meta?")) {
     await deleteGoal(id);
-    reloadData(); // Isso deve recarregar tanto transactions quanto goals
+    reloadData();
   }
 };
 
-  // Roda assim que o site abre
   useEffect(() => {
     reloadData();
   }, []);
@@ -168,6 +166,33 @@ export default function App() {
           </p>
         </div>
       </div>
+      {/* RODAPÉ DE CRÉDITOS */}
+      <footer className="mt-12 pb-6 text-center">
+        <hr className="border-gray-300 mb-6" />
+        <p className="text-gray-500 text-sm flex items-center justify-center gap-1">
+          Desenvolvido com <span className="text-red-500">❤️</span> por 
+          <span className="font-bold text-gray-700"> Gabriel Lima</span>
+        </p>
+        <div className="flex justify-center gap-4 mt-2">
+          <a 
+            href="https://github.com/seu-usuario" 
+            target="_blank" 
+            className="text-gray-400 hover:text-gray-800 text-xs transition-colors"
+          >
+            GitHub
+          </a>
+          <span className="text-gray-300">•</span>
+          <a 
+            href="https://linkedin.com/in/seu-perfil" 
+            target="_blank" 
+            className="text-gray-400 hover:text-blue-600 text-xs transition-colors"
+          >
+            LinkedIn
+          </a>
+          <span className="text-gray-300">•</span>
+          <span className="text-gray-400 text-xs">© 2024</span>
+        </div>
+      </footer>
     </div>
   );
   
