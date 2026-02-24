@@ -190,7 +190,7 @@ export default function App() {
             LinkedIn
           </a>
           <span className="text-gray-300">•</span>
-          <span className="text-gray-400 text-xs">© 2024</span>
+          <span className="text-gray-400 text-xs">© 2026</span>
         </div>
       </footer>
     </div>
