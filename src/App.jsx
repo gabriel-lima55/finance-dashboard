@@ -189,6 +189,7 @@ export default function App() {
           >
             LinkedIn
           </a>
+          <a href="https://portifolio-gabriel-lima.vercel.app/" target="_blank" className="text-gray-400 hover:text-purple-600 text-xs transition-colors">Portfólio</a>
           <span className="text-gray-300">•</span>
           <span className="text-gray-400 text-xs">© 2026</span>
         </div>
