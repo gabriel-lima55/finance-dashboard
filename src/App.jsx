@@ -175,7 +175,7 @@ export default function App() {
         </p>
         <div className="flex justify-center gap-4 mt-2">
           <a 
-            href="https://github.com/seu-usuario" 
+            href="https://github.com/gabriel-lima55/finance-dashboard" 
             target="_blank" 
             className="text-gray-400 hover:text-gray-800 text-xs transition-colors"
           >
@@ -183,7 +183,7 @@ export default function App() {
           </a>
           <span className="text-gray-300">•</span>
           <a 
-            href="https://linkedin.com/in/seu-perfil" 
+            href="https://www.linkedin.com/in/gabriel-lima-80/" 
             target="_blank" 
             className="text-gray-400 hover:text-blue-600 text-xs transition-colors"
           >
