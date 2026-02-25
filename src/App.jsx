@@ -49,7 +49,19 @@ export default function App() {
   return (
     
     <div className="min-h-screen bg-gray-100 p-6 font-sans">
-      
+      {/* Aviso de Manutenção */}
+      <div style={{
+        backgroundColor: '#fff3cd',
+        color: '#856404',
+        padding: '10px',
+        textAlign: 'center',
+        fontWeight: 'bold',
+        fontSize: '14px',
+        borderBottom: '1px solid #ffeeba'
+      }}>
+        ⚠️ O banco de dados está em manutenção para atualização de segurança. 
+        Os dados podem não carregar no momento.
+      </div>
       <h1 className="text-3xl font-bold text-gray-800 mb-8 text-center">Meu Dashboard Financeiro</h1>
 
       {/* DASHBOARD - RESUMO */}
