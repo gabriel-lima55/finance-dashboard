@@ -1,12 +1,15 @@
 // src/api.js
 
-// Se o site estiver rodando na Vercel, ele usa o link do Render. 
-// Se estiver no seu PC, ele usa o localhost.
-const BASE_URL = import.meta.env.MODE === 'production' 
-  ? "https://finance-dashboard-ws.onrender.com" 
-  : "http://localhost:5000";
+const isProduction = import.meta.env.MODE === 'production';
 
-// O restante das suas funções (getTransactions, etc) continua igual abaixo...
+const BASE_URL = isProduction 
+  ? "/api" 
+  : (import.meta.env.VITE_API_URL 
+      ? (import.meta.env.VITE_API_URL.startsWith('http') 
+          ? import.meta.env.VITE_API_URL 
+          : `https://${import.meta.env.VITE_API_URL}`)
+      : "http://localhost:5000");
+
 // --- TRANSACTIONS ---
 
 export async function getTransactions() {
