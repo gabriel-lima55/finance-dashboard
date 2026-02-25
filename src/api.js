@@ -1,7 +1,14 @@
-// Substitua as configurações antigas por esta linha direta:
-const BASE_URL = 'https://finance-dashboard-ws.onrender.com';
+// src/api.js
 
-// ... resto do seu código (as funções getTransactions, etc)
+const isProduction = import.meta.env.MODE === 'production';
+
+const BASE_URL = isProduction 
+  ? "/api" 
+  : (import.meta.env.VITE_API_URL 
+      ? (import.meta.env.VITE_API_URL.startsWith('http') 
+          ? import.meta.env.VITE_API_URL 
+          : `https://${import.meta.env.VITE_API_URL}`)
+      : "http://localhost:5000");
 
 // --- TRANSACTIONS ---
 
